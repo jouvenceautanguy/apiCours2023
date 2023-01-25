@@ -18,6 +18,13 @@ server.get("/posts",(req,res) => {
     res.end("Liste des articles");
 });
 
+server.post('/posts', (req, res) =>{
+
+    res.type('html');
+    res.status(201);
+    res.end('Article crée');
+})
+
 // const server = http.createServer((req,res) => {
 
 //     let url = req.url;
