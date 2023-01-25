@@ -4,26 +4,38 @@ const hostname = "0.0.0.0";
 const port = 3000;
 const server = express();
 
-server.get("/",(req,res) => {
+const mongoose = require('mongoose');
 
-    res.type('html');
-    res.status(200);
-    res.end("Home");
-});
+mongoose.connect("mongodb://mongo/apinode");
 
-server.get("/posts",(req,res) => {
+server.use(express.urlencoded()); // url encodé pour save les données encodé dans des fichiers json 
+server.use(express.json());
 
-    res.type('html');
-    res.status(200);
-    res.end("Liste des articles");
-});
+const postRoute = require('./api/routes/postRoute');
+postRoute(server);
 
-server.post('/posts', (req, res) =>{
 
-    res.type('html');
-    res.status(201);
-    res.end('Article crée');
-})
+
+// server.get("/",(req,res) => {
+
+//     res.type('html');
+//     res.status(200);
+//     res.end("Home");
+// });
+
+// server.get("/posts",(req,res) => {
+
+//     res.type('html');
+//     res.status(200);
+//     res.end("Liste des articles");
+// });
+
+// server.post('/posts', (req, res) =>{
+
+//     res.type('html');
+//     res.status(201);
+//     res.end('Article crée');
+// })
 
 // const server = http.createServer((req,res) => {
 
