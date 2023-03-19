@@ -1,5 +1,16 @@
 version: "3.3"
 services:
+  db:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ff844b8cd
+      MYSQL_DATABASE: api
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./src:/var/lib/mysql
   node:
     container_name: project_node
     image: "node:latest"
@@ -13,7 +24,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - "./src:/home/node/app"
+     - "./src:/home/node/app"
+    
     links:
       - mongo
     networks:

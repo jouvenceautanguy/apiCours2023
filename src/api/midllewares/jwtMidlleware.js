@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+/* const jwt = require("jsonwebtoken");
 const jwtKey = process.env.JWT_KEY;
 
 exports.verifyToken = (req, res) => {
@@ -10,7 +10,7 @@ exports.verifyToken = (req, res) => {
         res.status(403);
         res.json({ message: "Acces interdit : token manquant" });
       } else {
-        nex();
+        next();
       }
     });
   } else {
@@ -18,3 +18,4 @@ exports.verifyToken = (req, res) => {
     res.json({ message: "Acces interdit " });
   }
 };
+ */

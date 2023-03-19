@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/* const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 let commentSchema = new Schema({
   name: {
@@ -18,3 +18,4 @@ let commentSchema = new Schema({
   },
 });
 module.exports = mongoose.model("Comment", commentSchema);
+ */

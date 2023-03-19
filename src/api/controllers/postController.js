@@ -1,5 +1,5 @@
-const Post = require("../models/postModel");
-const textApiProvider = require("../providers/textApiProvider");
+/* const Post = require("../models/postModel");
+//const textApiProvider = require("../providers/textApiProvider");
 exports.listAllPosts = (req, res) => {
   Post.find({}, (error, posts) => {
     if (error) {
@@ -12,9 +12,15 @@ exports.listAllPosts = (req, res) => {
     }
   });
 };
-exports.createAPost = (req, res) => {
-  let newPost = new Post(req.body);
 
+
+exports.createAService = (req, res) => {
+  
+  let newPost = new Post(req.body);
+// let post = Post.create({
+//   title: req.body.title,
+//   content: req.body.content,
+// })
   if (!newPost.content) {
     let randomText = textApiProvider.getRandomText();
     newPost.content = randomText;
@@ -75,3 +81,4 @@ exports.deleteAPost = (req, res) => {
     }
   });
 };
+ */

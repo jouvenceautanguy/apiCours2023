@@ -1,15 +1,15 @@
-module.exports = (server) => {
+/* module.exports = (server) => {
   const PostController = require("../controllers/postController");
-  const jwtMidlleware = require("../midllewares/jwtMidlleware");
+ // const jwtMidlleware = require("../midllewares/jwtMidlleware");
 
   server
     .route("/posts")
     .get(PostController.listAllPosts)
-    .post(jwtMidlleware.verifyToken, PostController.createAPost);
-
+    // .post(jwtMidlleware.verifyToken, PostController.createAPost);
+    .post(PostController.createAPost);
   server
     .route("/posts/:post_id")
-    .all(jwtMidlleware.verifyToken)
+  //  .all(jwtMidlleware.verifyToken)
     .get(PostController.getAPost)
     .put(PostController.updateAPost)
     .delete(PostController.deleteAPost);
@@ -43,3 +43,4 @@ module.exports = (server) => {
 //     }
 //   });
 // };
+ */

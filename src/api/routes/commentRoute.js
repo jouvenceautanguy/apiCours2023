@@ -1,4 +1,4 @@
-module.exports = (server) => {
+/* module.exports = (server) => {
   const commentController = require("../controllers/commentController");
   server
     .route("/posts/:post_id/comments")
@@ -10,3 +10,4 @@ module.exports = (server) => {
     .put(commentController.updateAComment)
     .delete(commentController.deleteAComment);
 };
+ */

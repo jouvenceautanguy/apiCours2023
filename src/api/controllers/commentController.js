@@ -1,4 +1,4 @@
-const Post = require("../models/postModel");
+/* const Post = require("../models/postModel");
 const Comment = require("../models/commentModel");
 exports.listAllComments = (req, res) => {
   Comment.find({ post_id: req.params.post_id }, (error, comments) => {
@@ -77,3 +77,4 @@ exports.deleteAComment = (req, res) => {
     }
   });
 };
+ */
