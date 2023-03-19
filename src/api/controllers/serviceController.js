@@ -42,4 +42,4 @@ exports.deleteService = function(req, res) {
         if (error) throw error;
         res.json({ message: 'Service deleted successfully.' });
     });
-};
+}; // ajout crud
