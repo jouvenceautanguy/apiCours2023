@@ -30,10 +30,11 @@ server.use(express.json());
 // const commentRoute = require("./api/routes/commentRoute");
 // commentRoute(server);
 
-// const userRoute = require("./api/routes/userRoute");
-// userRoute(server);
+const userRoute = require("./api/routes/userRoute");
+userRoute(server);
 
 const serviceRoute = require("./api/routes/servicesRoute");
 serviceRoute(server);
+
 server.listen(port, hostname);
 
