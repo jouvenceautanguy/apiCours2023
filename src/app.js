@@ -27,8 +27,8 @@ server.use(express.json());
 // const postRoute = require("./api/routes/postRoute");
 // postRoute(server);
 
-// const commentRoute = require("./api/routes/commentRoute");
-// commentRoute(server);
+const tipsRoute = require("./api/routes/tipsRoute");
+tipsRoute(server);
 
 const userRoute = require("./api/routes/userRoute");
 userRoute(server);
