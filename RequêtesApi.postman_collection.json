@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "1e0fde68-0a22-4004-8c84-9ff306e944ec",
+		"name": "RequêtesApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26248051"
+	},
+	"item": [
+		{
+			"name": "usersRoute",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifAdmin(token)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pin",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/verifAdmin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"verifAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "bidul",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "ytyt",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/9",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstname",
+									"value": "daaaad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/users/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/users/8",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "paymentsRoute",
+			"item": [
+				{
+					"name": "getPaymentsByUser(avecTokenHeader)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0MjQ4NjYsImV4cCI6MTY3OTQyODQ2Nn0.aZcO1Onlbcq1ZfLxmNpvrc77NHpO8axmPbleala6O5o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/payments/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPayments(avecTokenHeader)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0MjQ4NjYsImV4cCI6MTY3OTQyODQ2Nn0.aZcO1Onlbcq1ZfLxmNpvrc77NHpO8axmPbleala6O5o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/payments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentsOfAllUser(avecTokenHeader)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0MjQ4NjYsImV4cCI6MTY3OTQyODQ2Nn0.aZcO1Onlbcq1ZfLxmNpvrc77NHpO8axmPbleala6O5o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/payments/allUser",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"allUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/payments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0MjQ4NjYsImV4cCI6MTY3OTQyODQ2Nn0.aZcO1Onlbcq1ZfLxmNpvrc77NHpO8axmPbleala6O5o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amout",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "id_user",
+									"value": "3",
+									"description": "(sera récupérer par le front)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/payments",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/payments/4",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaW4iOiIxMjMiLCJpYXQiOjE2Nzk0MjQ4NjYsImV4cCI6MTY3OTQyODQ2Nn0.aZcO1Onlbcq1ZfLxmNpvrc77NHpO8axmPbleala6O5o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/payments/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"payments",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "serviceRoute",
+			"item": []
+		},
+		{
+			"name": "tipsRoute",
+			"item": [
+				{
+					"name": "getAllTips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTipServiceUp (serviceActif)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/tipService",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"tipService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTotalTipsByMonth (tips du mois)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
