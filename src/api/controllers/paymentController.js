@@ -1,6 +1,7 @@
 
 const db = require("../../db");
 
+
 // Récupération de tous les paiements
 exports.getAllPayments = function(req, res) {
     db.query('SELECT * FROM tipsPayments', function(error, results) {

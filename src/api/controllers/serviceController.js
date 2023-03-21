@@ -45,7 +45,7 @@ exports.deleteService = function(req, res) {
 }; 
 // récupérer les utilisateurs en service 
 exports.getServiceUsers = function(req,res) {
-    qd.query('SELECT * FROM `users` WHERE `active` = 1',  function(error, results) {
+    db.query('SELECT * FROM `users` WHERE `active` = 1',  function(error, results) {
         if (error) throw error;
         res.json(results);
     })
@@ -54,7 +54,7 @@ exports.getServiceUsers = function(req,res) {
 
 // récupération du service actuel pour le front 
 exports.getServiceUp = function(req,res) {
-    qd.query('SELECT * FROM `services` WHERE `shiftClosed` = 0',  function(error, results) {
+    db.query('SELECT * FROM `services` WHERE `shiftClosed` = 0',  function(error, results) {
         if (error) throw error;
         res.json(results);
     })

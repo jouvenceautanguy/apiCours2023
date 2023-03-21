@@ -1,3 +1,4 @@
+const  jwt = require("jsonwebtoken");
 const db = require("../../db");
 
 // Récupération de tous les utilisateurs
@@ -44,3 +45,19 @@ exports.deleteUser = function(req, res) {
         res.json({ message: 'User deleted successfully.' });
     });
 };
+
+exports.verifAdmin = function(req, res) {
+    const pin = req.params.pin;
+    db.query('SELECT * FROM admin WHERE pincode = ?', [pin], function(error, results) {
+    if (error) throw error;
+    if (results.length > 0) {
+     //  jwt.sign(// voir doc)
+    // Le code PIN est valide, vous pouvez maintenant autoriser l'accès à la page admin.
+    res.status(200).send('Connexion réussie !');
+    } else {
+    // Le code PIN est incorrect, retournez un message d'erreur.
+    res.status(401).send('Code PIN incorrect !');
+    }
+    });
+    };
+
