@@ -16,4 +16,9 @@ server.put('/services/:id', serviceController.updateService);
 // Suppression d'un service par son ID
 server.delete('/services/:id', serviceController.deleteService);
 
+//récupération des utilisateurs en service
+server.get('/services/users', serviceController.getServiceUsers);
+
+//récupération du service actuellement UP
+server.get('/services/up', serviceController.getServiceUp);
 };
