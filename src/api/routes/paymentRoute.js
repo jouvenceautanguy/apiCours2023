@@ -9,7 +9,7 @@ module.exports = (server) => {
     server.get('/payments/user/:id', middleware.verifyToken, paymentController.getPaymentByUserId);
 
 // récupérer tous les soldes de tous les Users. 
-    server.get('payments/allUser', middleware.verifyToken, paymentController.getAllPaymentsAllUsers);
+    server.get('/payments/allUser', middleware.verifyToken, paymentController.getAllPaymentsAllUsers);
 
     // Création d'un nouveau paiement
     server.post('/payments', middleware.verifyToken, paymentController.createPayment);

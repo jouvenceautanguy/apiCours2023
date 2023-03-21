@@ -1,5 +1,9 @@
 module.exports = (server) => {
   const userController = require('../controllers/userController');
+
+  
+ //verif
+ server.get("/users/verifAdmin", userController.verifAdmin);
   
   // Récupération de tous les services
   server.get('/users', userController.getAllUsers);
@@ -15,5 +19,6 @@ module.exports = (server) => {
   
   // Suppression d'un service par son ID
   server.delete('/users/:id', userController.deleteUser);
+
   
   };

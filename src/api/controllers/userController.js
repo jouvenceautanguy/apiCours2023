@@ -47,17 +47,17 @@ exports.deleteUser = function(req, res) {
 };
 
 exports.verifAdmin = function(req, res) {
-    const pin = req.params.pin;
+    console.log(process.env.JWT_KEY);
+    const {pin} = req.body;
     db.query('SELECT * FROM admin WHERE pincode = ?', [pin], function(error, results) {
     if (error) throw error;
     if (results.length > 0) {
-     //  jwt.sign(// voir doc)
-    // Le code PIN est valide, vous pouvez maintenant autoriser l'accès à la page admin.
-    res.status(200).send('Connexion réussie !');
-    } else {
-    // Le code PIN est incorrect, retournez un message d'erreur.
-    res.status(401).send('Code PIN incorrect !');
-    }
+
+      const token = jwt.sign({ pin }, process.env.JWT_KEY , { expiresIn: "1h" });
+        res.status(200).send({ token: token });
+      } else {
+        res.status(401).send('Code PIN incorrect !');
+      }
     });
     };
 
