@@ -6,10 +6,10 @@ module.exports = (server) => {
   // récupère les tips du service actuel pour la vue
   server.get("/tips/tipService", tipsController.getTipServiceUp);
 
-  // récup tous les tips
+  // récup tous les tips par mois
   server.get("/tips/all", tipsController.getTotalTipsByMonth);
 
-  // modif d'un tip par son ID
+  // récup d'un tip par son ID
   server.get("/tips/:id", tipsController.getTipById);
 
   // Création d'un nouveau tip

@@ -1,4 +1,6 @@
 const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
 const db = require('./db');
 
 const hostname = "0.0.0.0";
