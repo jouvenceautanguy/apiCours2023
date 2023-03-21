@@ -24,8 +24,8 @@ db.query('SELECT * FROM users', (err, rows) => {
 server.use(express.urlencoded({ extended: true }));// url encodé pour save les données encodé dans des fichiers json
 server.use(express.json());
 
-// const postRoute = require("./api/routes/postRoute");
-// postRoute(server);
+const paymentRoute = require("./api/routes/paymentRoute");
+paymentRoute(server);
 
 const tipsRoute = require("./api/routes/tipsRoute");
 tipsRoute(server);

@@ -8,6 +8,14 @@ exports.getAllTips = function(req, res) {
   });
 };
 
+//tips par mois
+exports.getTotalTipsByMonth = function(req, res) {
+  db.query("SELECT DATE_FORMAT(created_at, '%Y-%m') AS month, SUM(tips) AS total_amount FROM tabletips GROUP BY month", function(error, results) {
+    if (error) throw error;
+    res.json(results);
+  });
+};
+
 // Récupération d'un tip par son ID
 exports.getTipById = function(req, res) {
   const tipId = req.params.id;
@@ -51,3 +59,4 @@ exports.getTipServiceUp = function(req, res) {
   res.json(results);
  }) 
 }
+
