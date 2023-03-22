@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1e0fde68-0a22-4004-8c84-9ff306e944ec",
+		"_postman_id": "4f4b3917-2a57-4f64-b0fa-2492879d6d29",
 		"name": "RequêtesApi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26248051"
+		"_exporter_id": "25503387"
 	},
 	"item": [
 		{
@@ -326,7 +326,161 @@
 		},
 		{
 			"name": "serviceRoute",
-			"item": []
+			"item": [
+				{
+					"name": "getAllServices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getServiceById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsersEnService",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/services",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "shiftType",
+									"value": "0",
+									"description": "(0 midi / 1 soir)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/services",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/services/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "shiftType",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/services/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/services/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getServiceUp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/services/up",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"services",
+								"up"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "tipsRoute",
@@ -382,6 +536,111 @@
 							"path": [
 								"tips",
 								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTipsByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/tips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tips",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "id_restaurantTable",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "id_service",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tips",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/tips/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "tips",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/tips/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/tips/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tips/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tips",
+								"1"
 							]
 						}
 					},
