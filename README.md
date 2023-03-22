@@ -8,6 +8,7 @@ Pour l'installation :
 - Installer mysql 
 - importer la Base de donnée mysql.
 - lancer le serveur mysql
+- Installer dotenv (npm i dotenv)
 
 - npm i (si besoin est).
 
